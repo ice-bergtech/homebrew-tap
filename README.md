@@ -37,6 +37,10 @@ List of formulae available in this tap:
 
 - **kr8+**: [ice-tech/kr8](https://github.com/ice-tech/kr8) kr8+ is an opinionated configuration management tool for Kubernetes Clusters
 
+```sh
+brew install ice-bergtech/tap/kr8
+```
+
 ---
 
 ## Development
