@@ -5,19 +5,19 @@
 class Kr8 < Formula
   desc "An opinionated configuration management tool for Kubernetes Clusters"
   homepage "https://ice-bergtech.github.io/kr8"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
 
   depends_on "helm"
   depends_on "jsonnet"
 
   on_macos do
-    url "https://github.com/ice-bergtech/kr8/releases/download/v0.2.2/kr8_0.2.2_darwin_amd64.tar.gz", using: CurlDownloadStrategy,
+    url "https://github.com/ice-bergtech/kr8/releases/download/v0.2.3/kr8_0.2.3_darwin_amd64.tar.gz", using: CurlDownloadStrategy,
       headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_TAP_GITHUB_TOKEN"]}"
       ]
-    sha256 "0b913b353731363ea1564ac3c3e0ffcf7678f7bb9c2010d6824c068f4ebdd482"
+    sha256 "b35059bb096b11952b624b7a975a1adb8de4153a0bfa7af746640e3f4ef3e6b3"
 
     def install
       bin.install "kr8"
@@ -36,12 +36,12 @@ class Kr8 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ice-bergtech/kr8/releases/download/v0.2.2/kr8_0.2.2_linux_amd64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/ice-bergtech/kr8/releases/download/v0.2.3/kr8_0.2.3_linux_amd64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_TAP_GITHUB_TOKEN"]}"
         ]
-      sha256 "2f7d18f4a71c59ff9b01bd522a61aa1caf3529e8cd9dbad8d7879a2714a6df0f"
+      sha256 "3886105332fdf385f0e155b5a46cab627e0818694db74279e5e1c645b0900f11"
       def install
         bin.install "kr8"
       end
